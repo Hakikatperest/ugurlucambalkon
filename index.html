@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uğurlu Cam Balkon | İstanbul Cam Balkon & Duşakabin Sistemleri</title>
+    <meta name="description" content="Profesyonel cam balkon, duşakabin sistemleri. İstanbul'un tüm ilçelerine kaliteli cam çözümleri, uygun fiyat ve garantili montaj.">
+    <meta name="keywords" content="cam balkon, duşakabin, İstanbul cam balkon, sürgülü cam balkon, balkon camlama, duşakabin modelleri">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --whatsapp-green: #25d366;
+            --dark-gray: #1f2937;
+            --medium-gray: #4b5563;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: var(--dark-gray);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('images/ugurlucambalkon1.jpeg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .phone-cta {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            margin-right: 15px;
+        }
+        
+        .whatsapp-cta {
+            background-color: var(--whatsapp-green);
+            color: var(--white);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Services Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            background-color: var(--light-gray);
+        }
+        
+        .gallery-container {
+            margin-bottom: 60px;
+        }
+        
+        .gallery-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .gallery-tabs {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .gallery-tab {
+            padding: 10px 20px;
+            background-color: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .gallery-tab.active {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-color: var(--primary-blue);
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Articles Section */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .article-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .article-content {
+            padding: 25px;
+        }
+        
+        .article-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+        
+        .article-content p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+        }
+        
+        .read-more {
+            color: var(--primary-blue);
+            font-weight: 500;
+            text-decoration: none;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--dark-gray);
+            color: var(--white);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .contact-details {
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .footer-about p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links h4, .footer-services h4 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h4:after, .footer-services h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-blue);
+        }
+        
+        .footer-links ul, .footer-services ul {
+            list-style: none;
+        }
+        
+        .footer-links li, .footer-services li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a, .footer-services a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover, .footer-services a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 14px;
+        }
+        
+        .copyright a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        /* Fixed CTA Buttons */
+        .fixed-cta {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .fixed-cta a {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .fixed-cta a:hover {
+            transform: scale(1.1);
+        }
+        
+        .phone-fixed {
+            background-color: var(--primary-blue);
+        }
+        
+        .whatsapp-fixed {
+            background-color: var(--whatsapp-green);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 38px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-menu li {
+                margin: 0 0 15px 0;
+            }
+            
+            .hero {
+                padding: 140px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .cta-button {
+                display: block;
+                margin: 0 0 15px 0;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .phone-cta {
+                margin-right: 0;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            .gallery-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .section-title h2 {
+                font-size: 26px;
+            }
+            
+            .fixed-cta {
+                right: 20px;
+                bottom: 20px;
+            }
+            
+            .fixed-cta a {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Uğurlu Cam Balkon</a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#services">Hizmetlerimiz</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#articles">Makaleler</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Profesyonel Cam Balkon & Duşakabin Sistemleri</h1>
+            <p>Tüm İstanbul'a kaliteli cam çözümleri, uygun fiyat ve garantili montaj hizmeti sunuyoruz. 10+ yıllık deneyimimizle balkonlarınızı modern yaşam alanlarına dönüştürüyoruz.</p>
+            <div class="hero-cta">
+                <a href="tel:05303847585" class="cta-button phone-cta">
+                    <i class="fas fa-phone-alt"></i> 0530 384 75 85
+                </a>
+                <a href="https://wa.me/905303847585" target="_blank" class="cta-button whatsapp-cta">
+                    <i class="fab fa-whatsapp"></i> WhatsApp'tan Yazın
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hizmetlerimiz</h2>
+                <p>İstanbul'un tüm ilçelerine sunduğumuz profesyonel cam balkon ve duşakabin çözümleri</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="images/ugurlucambalkon1.jpeg" alt="Cam Balkon Sistemleri" class="service-img">
+                    <div class="service-content">
+                        <h3>Cam Balkon Sistemleri</h3>
+                        <p>Sürgülü, katlanır ve sabit cam balkon sistemleri ile balkonlarınızı mevsim şartlarından koruyor, daha kullanışlı yaşam alanlarına dönüştürüyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="images/ugurludusakabin1.jpeg" alt="Duşakabin Sistemleri" class="service-img">
+                    <div class="service-content">
+                        <h3>Duşakabin Sistemleri</h3>
+                        <p>Banyolarınız için modern, şık ve fonksiyonel duşakabin çözümleri. Krom, beyaz ve siyah renk seçenekleri ile istediğiniz tasarımı sunuyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="images/ugurlucambalkon10.jpeg" alt="Cam Korkuluk ve Küpeşteler" class="service-img">
+                    <div class="service-content">
+                        <h3>Cam Korkuluk ve Küpeşteler</h3>
+                        <p>Balkon, teras ve merdivenler için şık ve güvenli cam korkuluk sistemleri. Temperli cam ve kaliteli bağlantı elemanları ile güvenli çözümler.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Proje Galerimiz</h2>
+                <p>Tamamladığımız cam balkon ve duşakabin projelerinden örnekler</p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-header">
+                    <h3>Çalışmalarımız</h3>
+                    <div class="gallery-tabs">
+                        <div class="gallery-tab active" data-gallery="cam-balkon">Cam Balkon</div>
+                        <div class="gallery-tab" data-gallery="dusakabin">Duşakabin</div>
+                    </div>
+                </div>
+                
+                <div class="gallery" id="camBalkonGallery">
+                    <!-- Cam balkon görselleri -->
+                    <div class="gallery-item">
+                        <img src="images/ugurlucambalkon1.jpeg" alt="Cam balkon örneği 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/ugurlucambalkon2.jpeg" alt="Cam balkon örneği 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/ugurlucambalkon3.jpeg" alt="Cam balkon örneği 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/ugurlucambalkon4.jpeg" alt="Cam balkon örneği 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/ugurlucambalkon5.jpeg" alt="Cam balkon örneği 5">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/ugurlucambalkon6.jpeg" alt="Cam balkon örneği 6">
+                    </div>
+                </div>
+                
+                <div class="gallery" id="dusakabinGallery" style="display: none;">
+                    <!-- Duşakabin görselleri -->
+                    <div class="gallery-item">
+                        <img src="images/ugurludusakabin1.jpeg" alt="Duşakabin örneği 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/ugurludusakabin2.jpeg" alt="Duşakabin örneği 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/ugurludusakabin3.jpeg" alt="Duşakabin örneği 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/ugurludusakabin4.jpeg" alt="Duşakabin örneği 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/ugurludusakabin5.jpeg" alt="Duşakabin örneği 5">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/ugurludusakabin6.jpeg" alt="Duşakabin örneği 6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="section" id="articles">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cam Balkon & Duşakabin Hakkında</h2>
+                <p>Cam balkon ve duşakabin sistemleri hakkında faydalı bilgiler ve sektörel makaleler</p>
+            </div>
+            
+            <div class="articles-grid">
+                <div class="article-card">
+                    <img src="images/ugurlucambalkon7.jpeg" alt="Cam Balkon Avantajları" class="service-img">
+                    <div class="article-content">
+                        <h3>Cam Balkonun Avantajları Nelerdir?</h3>
+                        <p>Cam balkonlar, balkon alanlarınızı her mevsim kullanılabilir hale getirir. Toz, yağmur ve rüzgardan korunmanızı sağlarken, doğal ışığın iç mekana girmesine izin verir. Ayrıca enerji tasarrufu sağlar ve evinizin değerini artırır.</p>
+                        <a href="#" class="read-more">Devamını Oku →</a>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <img src="images/ugurludusakabin7.jpeg" alt="Duşakabin Seçimi" class="service-img">
+                    <div class="article-content">
+                        <h3>Doğru Duşakabin Seçimi Nasıl Yapılır?</h3>
+                        <p>Duşakabin seçerken banyo boyutunuza, dekorasyon tarzınıza ve bütçenize uygun modelleri değerlendirmelisiniz. Krom, beyaz veya siyah renk seçenekleri, kaymaz taban ve kaliteli cam özelliklerine dikkat etmeniz önemlidir.</p>
+                        <a href="#" class="read-more">Devamını Oku →</a>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <img src="images/ugurlucambalkon8.jpeg" alt="Cam Balkon Bakımı" class="service-img">
+                    <div class="article-content">
+                        <h3>Cam Balkon Bakımı ve Temizliği</h3>
+                        <p>Cam balkon sistemlerinizin uzun ömürlü olması için düzenli bakım önemlidir. Ray sistemlerinin temizliği, contaların kontrolü ve camların doğru ürünlerle temizlenmesi sistem ömrünü uzatır ve performansını korur.</p>
+                        <a href="#" class="read-more">Devamını Oku →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Ücretsiz Keşif ve Fiyat Teklifi</h3>
+                    <p>İstanbul'un tüm ilçelerine ücretsiz keşif hizmeti sunuyoruz. Cam balkon veya duşakabin ihtiyaçlarınız için bize ulaşın, size en uygun çözümü önerelim.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p>0530 384 75 85</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Hizmet Bölgesi</h4>
+                                <p>Tüm İstanbul</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Çalışma Saatleri</h4>
+                                <p>Hafta İçi: 08:00 - 19:00<br>Hafta Sonu: 09:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+                    <h3 style="margin-bottom: 20px; font-size: 28px;">Hemen İletişime Geçin</h3>
+                    <p style="margin-bottom: 30px; opacity: 0.9;">Cam balkon veya duşakabin projeniz için hemen ücretsiz keşif randevusu oluşturun.</p>
+                    
+                    <a href="tel:05303847585" class="cta-button phone-cta" style="margin-bottom: 15px; display: inline-block;">
+                        <i class="fas fa-phone-alt"></i> Telefonla Ara
+                    </a>
+                    
+                    <a href="https://wa.me/905303847585" target="_blank" class="cta-button whatsapp-cta" style="display: inline-block;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">Uğurlu Cam Balkon</a>
+                    <p>10+ yıllık deneyimimizle İstanbul'un tüm ilçelerine profesyonel cam balkon ve duşakabin sistemleri sunuyoruz. Kaliteli işçilik, uygun fiyat ve müşteri memnuniyeti ilkelerimizle hizmet veriyoruz.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="#home">Ana Sayfa</a></li>
+                        <li><a href="#services">Hizmetlerimiz</a></li>
+                        <li><a href="#gallery">Galeri</a></li>
+                        <li><a href="#articles">Makaleler</a></li>
+                        <li><a href="#contact">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h4>Hizmetlerimiz</h4>
+                    <ul>
+                        <li><a href="#services">Cam Balkon Sistemleri</a></li>
+                        <li><a href="#services">Duşakabin Sistemleri</a></li>
+                        <li><a href="#services">Cam Korkuluk & Küpeşteler</a></li>
+                        <li><a href="#services">Bakım & Onarım Hizmetleri</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Uğurlu Cam Balkon. Tüm hakları saklıdır. | SEO desteği: <a href="https://www.adsreklamvermek.com" target="_blank">AdsReklamVermek.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed CTA Buttons -->
+    <div class="fixed-cta">
+        <a href="tel:05303847585" class="phone-fixed">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://wa.me/905303847585" target="_blank" class="whatsapp-fixed">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Gallery Tabs
+        const galleryTabs = document.querySelectorAll('.gallery-tab');
+        const camBalkonGallery = document.getElementById('camBalkonGallery');
+        const dusakabinGallery = document.getElementById('dusakabinGallery');
+        
+        galleryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                galleryTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Show selected gallery
+                if (tab.dataset.gallery === 'cam-balkon') {
+                    camBalkonGallery.style.display = 'grid';
+                    dusakabinGallery.style.display = 'none';
+                } else {
+                    camBalkonGallery.style.display = 'none';
+                    dusakabinGallery.style.display = 'grid';
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
