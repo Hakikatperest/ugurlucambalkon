@@ -27,11 +27,18 @@
             box-sizing: border-box;
         }
         
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: var(--dark-gray);
             background-color: var(--white);
+            max-width: 100vw;
+            overflow-x: hidden;
         }
         
         h1, h2, h3, h4 {
@@ -63,6 +70,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
+            padding: 0 20px;
         }
         
         .logo {
@@ -71,6 +80,7 @@
             font-weight: 700;
             color: var(--primary-blue);
             text-decoration: none;
+            white-space: nowrap;
         }
         
         .nav-menu {
@@ -87,6 +97,7 @@
             color: var(--dark-gray);
             font-weight: 500;
             transition: color 0.3s;
+            white-space: nowrap;
         }
         
         .nav-menu a:hover {
@@ -100,6 +111,7 @@
             border: none;
             color: var(--dark-gray);
             cursor: pointer;
+            padding: 5px;
         }
         
         /* Hero Section */
@@ -109,12 +121,14 @@
             background-size: cover;
             background-position: center;
             text-align: center;
+            width: 100%;
         }
         
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
             color: var(--dark-gray);
+            padding: 0 10px;
         }
         
         .hero p {
@@ -122,6 +136,7 @@
             color: var(--medium-gray);
             max-width: 800px;
             margin: 0 auto 30px;
+            padding: 0 15px;
         }
         
         /* CTA Buttons */
@@ -136,6 +151,8 @@
             cursor: pointer;
             border: none;
             font-family: 'Poppins', sans-serif;
+            text-align: center;
+            white-space: nowrap;
         }
         
         .phone-cta {
@@ -157,29 +174,34 @@
         /* Services Section */
         .section {
             padding: 80px 0;
+            width: 100%;
         }
         
         .section-title {
             text-align: center;
             margin-bottom: 50px;
+            padding: 0 15px;
         }
         
         .section-title h2 {
             font-size: 36px;
             color: var(--dark-gray);
             margin-bottom: 15px;
+            padding: 0 10px;
         }
         
         .section-title p {
             color: var(--medium-gray);
             max-width: 700px;
             margin: 0 auto;
+            padding: 0 15px;
         }
         
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            padding: 0 15px;
         }
         
         .service-card {
@@ -188,6 +210,8 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: transform 0.3s;
+            width: 100%;
+            max-width: 100%;
         }
         
         .service-card:hover {
@@ -198,6 +222,7 @@
             height: 220px;
             width: 100%;
             object-fit: cover;
+            display: block;
         }
         
         .service-content {
@@ -213,10 +238,12 @@
         /* Gallery Section */
         .gallery-section {
             background-color: var(--light-gray);
+            width: 100%;
         }
         
         .gallery-container {
             margin-bottom: 60px;
+            padding: 0 15px;
         }
         
         .gallery-header {
@@ -224,11 +251,14 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
         
         .gallery-tabs {
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
         }
         
         .gallery-tab {
@@ -239,6 +269,7 @@
             cursor: pointer;
             font-weight: 500;
             transition: all 0.3s;
+            white-space: nowrap;
         }
         
         .gallery-tab.active {
@@ -251,12 +282,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
+            width: 100%;
         }
         
         .gallery-item {
             border-radius: 10px;
             overflow: hidden;
             height: 250px;
+            width: 100%;
         }
         
         .gallery-item img {
@@ -264,6 +297,7 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
+            display: block;
         }
         
         .gallery-item:hover img {
@@ -275,6 +309,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
+            padding: 0 15px;
         }
         
         .article-card {
@@ -282,6 +317,8 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 100%;
         }
         
         .article-content {
@@ -309,12 +346,14 @@
         .contact-section {
             background-color: var(--dark-gray);
             color: var(--white);
+            width: 100%;
         }
         
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
+            padding: 0 15px;
         }
         
         .contact-info h3 {
@@ -347,6 +386,7 @@
             justify-content: center;
             margin-right: 15px;
             font-size: 20px;
+            flex-shrink: 0;
         }
         
         /* Footer */
@@ -354,6 +394,7 @@
             background-color: #111827;
             color: var(--white);
             padding: 60px 0 30px;
+            width: 100%;
         }
         
         .footer-container {
@@ -361,6 +402,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
             margin-bottom: 40px;
+            padding: 0 20px;
         }
         
         .footer-logo {
@@ -418,6 +460,8 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             opacity: 0.7;
             font-size: 14px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
         
         .copyright a {
@@ -428,8 +472,8 @@
         /* Fixed CTA Buttons */
         .fixed-cta {
             position: fixed;
-            right: 30px;
-            bottom: 30px;
+            right: 20px;
+            bottom: 20px;
             z-index: 999;
             display: flex;
             flex-direction: column;
@@ -447,6 +491,7 @@
             font-size: 24px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
+            text-decoration: none;
         }
         
         .fixed-cta a:hover {
@@ -461,6 +506,15 @@
             background-color: var(--whatsapp-green);
         }
         
+        /* Hero CTA Buttons Container */
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 0 15px;
+        }
+        
         /* Mobile Responsive */
         @media (max-width: 992px) {
             .hero h1 {
@@ -469,6 +523,10 @@
             
             .hero p {
                 font-size: 18px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
         }
         
@@ -490,6 +548,7 @@
                 opacity: 0;
                 visibility: hidden;
                 transition: all 0.3s;
+                z-index: 999;
             }
             
             .nav-menu.active {
@@ -500,6 +559,18 @@
             
             .nav-menu li {
                 margin: 0 0 15px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-menu a {
+                display: block;
+                padding: 10px;
+                width: 100%;
+            }
+            
+            .header-container {
+                padding: 0 15px;
             }
             
             .hero {
@@ -508,13 +579,23 @@
             
             .hero h1 {
                 font-size: 32px;
+                line-height: 1.2;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
             }
             
             .cta-button {
                 display: block;
-                margin: 0 0 15px 0;
                 width: 100%;
                 max-width: 300px;
+                margin: 0 0 15px 0;
+                padding: 12px 24px;
             }
             
             .phone-cta {
@@ -534,6 +615,35 @@
                 align-items: flex-start;
                 gap: 20px;
             }
+            
+            .gallery-tabs {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 0 15px;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -541,13 +651,18 @@
                 font-size: 28px;
             }
             
+            .hero p {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+            
             .section-title h2 {
                 font-size: 26px;
             }
             
             .fixed-cta {
-                right: 20px;
-                bottom: 20px;
+                right: 15px;
+                bottom: 15px;
             }
             
             .fixed-cta a {
@@ -555,32 +670,123 @@
                 height: 50px;
                 font-size: 20px;
             }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+                gap: 20px;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .gallery-item {
+                height: 220px;
+            }
+            
+            .logo {
+                font-size: 20px;
+            }
+            
+            .contact-info h3 {
+                font-size: 24px;
+            }
+            
+            .hero-cta {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            
+            .cta-button {
+                font-size: 16px;
+                padding: 12px 20px;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            .service-content, .article-content {
+                padding: 20px;
+            }
+            
+            .service-content h3, .article-content h3 {
+                font-size: 20px;
+            }
         }
+        
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+            
+            .hero p {
+                font-size: 15px;
+            }
+            
+            .gallery-tab {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            
+            .cta-button {
+                padding: 10px 16px;
+                font-size: 15px;
+            }
+            
+            .fixed-cta {
+                right: 10px;
+                bottom: 10px;
+            }
+            
+            .fixed-cta a {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+        
         .fixed-cta a {
-    text-decoration: none;
-    outline: none;
-    border: none;
-    -webkit-tap-highlight-color: transparent;
-}
+            text-decoration: none;
+            outline: none;
+            border: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Genel düzenlemeler */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* İçeriklerin taşmasını engelle */
+        .service-content p, .article-content p, .contact-info p, .footer-about p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
     </style>
 </head>
 <body>
     <!-- Header & Navigation -->
     <header>
-        <div class="container header-container">
-            <a href="#" class="logo">Uğurlu Cam Balkon</a>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Ana Sayfa</a></li>
-                <li><a href="#services">Hizmetlerimiz</a></li>
-                <li><a href="#gallery">Galeri</a></li>
-                <li><a href="#articles">Makaleler</a></li>
-                <li><a href="#contact">İletişim</a></li>
-            </ul>
+        <div class="container">
+            <div class="header-container">
+                <a href="#" class="logo">Uğurlu Cam Balkon</a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#services">Hizmetlerimiz</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#articles">Makaleler</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -871,13 +1077,15 @@
                     <h3 style="margin-bottom: 20px; font-size: 28px;">Hemen İletişime Geçin</h3>
                     <p style="margin-bottom: 30px; opacity: 0.9;">Cam balkon, pergole veya diğer sistemler için hemen ücretsiz keşif randevusu oluşturun.</p>
                     
-                    <a href="tel:05303847585" class="cta-button phone-cta" style="margin-bottom: 15px; display: inline-block;">
-                        <i class="fas fa-phone-alt"></i> Telefonla Ara
-                    </a>
-                    
-                    <a href="https://wa.me/905303847585" target="_blank" class="cta-button whatsapp-cta" style="display: inline-block;">
-                        <i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz
-                    </a>
+                    <div class="contact-buttons">
+                        <a href="tel:05303847585" class="cta-button phone-cta" style="margin-bottom: 15px; display: block; width: 100%; max-width: 300px;">
+                            <i class="fas fa-phone-alt"></i> Telefonla Ara
+                        </a>
+                        
+                        <a href="https://wa.me/905303847585" target="_blank" class="cta-button whatsapp-cta" style="display: block; width: 100%; max-width: 300px;">
+                            <i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -952,7 +1160,7 @@
             });
         });
         
-        // Gallery Tabs - DÜZELTİLDİ
+        // Gallery Tabs
         const galleryTabs = document.querySelectorAll('.gallery-tab');
         
         galleryTabs.forEach(tab => {
@@ -1016,6 +1224,12 @@
                 header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
                 header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
             }
+        });
+        
+        // Sayfa yüklendiğinde mobil menüyü kapat
+        window.addEventListener('load', () => {
+            navMenu.classList.remove('active');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
         });
     </script>
 </body>
