@@ -74,13 +74,20 @@
             padding: 0 20px;
         }
         
+        /* LOGO BOYUTU BURADA KÜÇÜLTÜLDÜ */
         .logo {
             font-family: 'Poppins', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-blue);
             text-decoration: none;
             white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            max-height: 50px; /* 60px'den 50px'e küçültüldü */
+            width: auto;
+            height: auto;
+            display: block;
         }
         
         .nav-menu {
@@ -644,6 +651,11 @@
             .container {
                 padding: 0 15px;
             }
+            
+            /* Mobilde logo daha küçük */
+            .logo img {
+                max-height: 45px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -715,6 +727,11 @@
             .service-content h3, .article-content h3 {
                 font-size: 20px;
             }
+            
+            /* Çok küçük ekranlarda logo */
+            .logo img {
+                max-height: 40px;
+            }
         }
         
         @media (max-width: 400px) {
@@ -770,27 +787,27 @@
 </head>
 <body>
     <!-- Header & Navigation -->
-   <header>
-    <div class="container">
-        <div class="header-container">
-            <a href="#" class="logo">
-                <img src="images/ugurlulogo.png" alt="Uğurlu Cam Balkon Logo">
-            </a>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Ana Sayfa</a></li>
-                <li><a href="#services">Hizmetlerimiz</a></li>
-                <li><a href="#gallery">Galeri</a></li>
-                <li><a href="#articles">Makaleler</a></li>
-                <li><a href="#contact">İletişim</a></li>
-            </ul>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <a href="#" class="logo">
+                    <img src="images/ugurlulogo.png" alt="Uğurlu Cam Balkon Logo">
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#services">Hizmetlerimiz</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#articles">Makaleler</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
